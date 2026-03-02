@@ -1,0 +1,117 @@
+{
+  "student_metadata": {
+    "name": "Suyash Parmar",
+    "roll_number": "230057",
+    "course": "Advanced Machine Learning",
+    "exam": "Mid-Semester Examination",
+    "part": "Part A",
+    "submission_date": "2026-03-02"
+  },
+  "llm_tools_used": [
+    {
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "provider": "OpenAI"
+    }
+  ],
+  "full_llm_interaction_log": [
+    {
+      "interaction_id": 1,
+      "date": "2026-03-01",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "purpose": "Paper selection under formal constraints",
+      "prompt": "Suggest an SVM paper published between 2009-2012 in a top-tier venue (ICML, NeurIPS, KDD, AISTATS) that introduces a core methodological contribution rather than a survey or benchmarking study.",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Identified COFFIN (ICML 2010) as a methodological framework for large-scale linear SVM training.",
+      "student_verification": "Verified publication venue (ICML 2010) and confirmed it satisfies the 2009-2012 constraint.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 2,
+      "date": "2026-03-01",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "purpose": "Understanding methodological novelty",
+      "prompt": "What is the core methodological contribution of COFFIN and how does it differ from standard kernel SVM training approaches?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Clarified that COFFIN introduces on-demand feature computation and hashing within linear SVM optimization to address scalability limitations of kernel methods.",
+      "student_verification": "Reviewed Section 2 of the paper to confirm the ADD/DOT abstraction and hashing-based representation.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 3,
+      "date": "2026-03-02",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "purpose": "Dataset and reproducibility validation",
+      "prompt": "Does COFFIN use publicly accessible datasets or allow reproduction on smaller benchmark datasets using standard linear SVM solvers?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that the framework operates with standard linear SVM solvers and can be demonstrated on smaller datasets.",
+      "student_verification": "Reviewed the experimental section and confirmed compatibility with LibLinear and OCAS solvers.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 4,
+      "date": "2026-03-02",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "purpose": "Constraint compliance check",
+      "prompt": "Does the COFFIN paper involve restricted datasets, proprietary data, clinical data, or mandatory GPU/cluster-level computation?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that the framework does not rely on restricted data or mandatory specialized hardware.",
+      "student_verification": "Cross-checked dataset descriptions and hardware requirements mentioned in the experimental section.",
+      "confidence_level": 5
+    },
+    {
+      "interaction_id": 5,
+      "date": "2026-03-02",
+      "tool_name": "ChatGPT",
+      "model": "GPT-5",
+      "purpose": "Alignment with syllabus unit",
+      "prompt": "Does COFFIN directly align with the Support Vector Machines unit in a classical machine learning syllabus?",
+      "llm_response_used": "Yes",
+      "how_it_helped": "Confirmed that the framework builds directly on linear SVM hinge loss optimization and large-scale SVM training.",
+      "student_verification": "Verified the objective formulation matches standard linear SVM primal optimization.",
+      "confidence_level": 5
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "rank": 1,
+      "interaction_id": 1,
+      "prompt": "Suggest an SVM paper published between 2009-2012 in a top-tier venue that introduces a core methodological contribution.",
+      "why_important": "Ensured strict adherence to the formal selection constraints before committing to the paper."
+    },
+    {
+      "rank": 2,
+      "interaction_id": 2,
+      "prompt": "What is the core methodological contribution of COFFIN and how does it differ from standard kernel SVM training?",
+      "why_important": "Clarified the novelty of the framework compared to classical kernel-based approaches."
+    },
+    {
+      "rank": 3,
+      "interaction_id": 3,
+      "prompt": "Does COFFIN allow reproduction on smaller benchmark datasets using standard solvers?",
+      "why_important": "Validated practical feasibility for experimentation."
+    },
+    {
+      "rank": 4,
+      "interaction_id": 4,
+      "prompt": "Does the paper require restricted datasets or heavy specialized hardware?",
+      "why_important": "Confirmed compliance with infrastructure and dataset constraints."
+    },
+    {
+      "rank": 5,
+      "interaction_id": 5,
+      "prompt": "Does COFFIN align with the classical SVM unit of the syllabus?",
+      "why_important": "Ensured academic alignment with the course scope."
+    }
+  ],
+  "student_declaration": {
+    "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part A.",
+    "understanding_acknowledged": true,
+    "signature": "Suyash Parmar",
+    "date": "2026-03-02"
+  }
+}
