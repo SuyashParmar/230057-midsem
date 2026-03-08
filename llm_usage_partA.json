@@ -9,70 +9,70 @@
   },
   "llm_tools_used": [
     {
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
-      "provider": "OpenAI"
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
+      "provider": "Google"
     }
   ],
   "full_llm_interaction_log": [
     {
       "interaction_id": 1,
       "date": "2026-03-01",
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
       "purpose": "Paper selection under formal constraints",
-      "prompt": "Suggest an SVM paper published between 2009-2012 in a top-tier venue (ICML, NeurIPS, KDD, AISTATS) that introduces a core methodological contribution rather than a survey or benchmarking study.",
+      "prompt": "Suggest an SVM paper published between 2008-2013 in a top-tier venue (ECCV, ICML, NeurIPS) that introduces a core methodological contribution regarding kernel optimization.",
       "llm_response_used": "Yes",
-      "how_it_helped": "Identified COFFIN (ICML 2010) as a methodological framework for large-scale linear SVM training.",
-      "student_verification": "Verified publication venue (ICML 2010) and confirmed it satisfies the 2009-2012 constraint.",
+      "how_it_helped": "Identified 'A Fast Dual Method for HIK SVM Learning' (ECCV 2010) as a significant methodological contribution to dual-space SVM solvers.",
+      "student_verification": "Verified publication venue (ECCV 2010) and confirmed the paper satisfies the 2008-2013 temporal constraint[cite: 3].",
       "confidence_level": 5
     },
     {
       "interaction_id": 2,
       "date": "2026-03-01",
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
       "purpose": "Understanding methodological novelty",
-      "prompt": "What is the core methodological contribution of COFFIN and how does it differ from standard kernel SVM training approaches?",
+      "prompt": "What is the core methodological contribution of the ICD solver and how does it optimize the Histogram Intersection Kernel (HIK)?",
       "llm_response_used": "Yes",
-      "how_it_helped": "Clarified that COFFIN introduces on-demand feature computation and hashing within linear SVM optimization to address scalability limitations of kernel methods.",
-      "student_verification": "Reviewed Section 2 of the paper to confirm the ADD/DOT abstraction and hashing-based representation.",
+      "how_it_helped": "Clarified that the Inverse Coordinate Descent (ICD) is a deterministic dual-space solver that utilizes the additive property of HIK to achieve high scalability[cite: 3].",
+      "student_verification": "Reviewed Section 3 of the paper to confirm the derivation of the dual objective and the deterministic nature of the ICD algorithm[cite: 3].",
       "confidence_level": 5
     },
     {
       "interaction_id": 3,
       "date": "2026-03-02",
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
-      "purpose": "Dataset and reproducibility validation",
-      "prompt": "Does COFFIN use publicly accessible datasets or allow reproduction on smaller benchmark datasets using standard linear SVM solvers?",
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
+      "purpose": "Theoretical validation of the kernel",
+      "prompt": "Does the paper provide a theoretical proof for the validity of the Histogram Intersection Kernel on real-valued data?",
       "llm_response_used": "Yes",
-      "how_it_helped": "Confirmed that the framework operates with standard linear SVM solvers and can be demonstrated on smaller datasets.",
-      "student_verification": "Reviewed the experimental section and confirmed compatibility with LibLinear and OCAS solvers.",
+      "how_it_helped": "Confirmed the paper provides a formal proof that HIK is a positive definite kernel for non-negative real-valued feature vectors[cite: 3].",
+      "student_verification": "Cross-checked the proof in Section 2 and confirmed its mathematical alignment with Mercer's condition[cite: 3].",
       "confidence_level": 5
     },
     {
       "interaction_id": 4,
       "date": "2026-03-02",
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
-      "purpose": "Constraint compliance check",
-      "prompt": "Does the COFFIN paper involve restricted datasets, proprietary data, clinical data, or mandatory GPU/cluster-level computation?",
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
+      "purpose": "Empirical robustness and parameter sensitivity",
+      "prompt": "What are the empirical findings regarding the regularization parameter C in the ICD framework?",
       "llm_response_used": "Yes",
-      "how_it_helped": "Confirmed that the framework does not rely on restricted data or mandatory specialized hardware.",
-      "student_verification": "Cross-checked dataset descriptions and hardware requirements mentioned in the experimental section.",
+      "how_it_helped": "Highlighted the finding that ICD is not sensitive to the C parameter, allowing high accuracy with default settings[cite: 3].",
+      "student_verification": "Verified the experimental results in Section 4 using datasets such as DaimlerChrysler and INRIA Person[cite: 3].",
       "confidence_level": 5
     },
     {
       "interaction_id": 5,
       "date": "2026-03-02",
-      "tool_name": "ChatGPT",
-      "model": "GPT-5",
+      "tool_name": "Gemini",
+      "model": "Pro 1.5",
       "purpose": "Alignment with syllabus unit",
-      "prompt": "Does COFFIN directly align with the Support Vector Machines unit in a classical machine learning syllabus?",
+      "prompt": "Does the paper align with the Support Vector Machines unit of an Advanced Machine Learning course?",
       "llm_response_used": "Yes",
-      "how_it_helped": "Confirmed that the framework builds directly on linear SVM hinge loss optimization and large-scale SVM training.",
-      "student_verification": "Verified the objective formulation matches standard linear SVM primal optimization.",
+      "how_it_helped": "Confirmed that the work focuses on dual-space optimization and kernel properties specific to the SVM framework[cite: 3].",
+      "student_verification": "Verified the objective formulation matches classical SVM dual optimization principles studied in class[cite: 3].",
       "confidence_level": 5
     }
   ],
@@ -80,32 +80,32 @@
     {
       "rank": 1,
       "interaction_id": 1,
-      "prompt": "Suggest an SVM paper published between 2009-2012 in a top-tier venue that introduces a core methodological contribution.",
-      "why_important": "Ensured strict adherence to the formal selection constraints before committing to the paper."
+      "prompt": "Suggest an SVM paper published between 2008-2013 in a top-tier venue that introduces a core methodological contribution regarding kernel optimization.",
+      "why_important": "Ensured strict adherence to the formal selection constraints (A* conference and 2008-2013 window)."
     },
     {
       "rank": 2,
       "interaction_id": 2,
-      "prompt": "What is the core methodological contribution of COFFIN and how does it differ from standard kernel SVM training?",
-      "why_important": "Clarified the novelty of the framework compared to classical kernel-based approaches."
+      "prompt": "What is the core methodological contribution of the ICD solver and how does it optimize the Histogram Intersection Kernel (HIK)?",
+      "why_important": "Identified the primary technical novelty (Inverse Coordinate Descent) over existing stochastic methods."
     },
     {
       "rank": 3,
       "interaction_id": 3,
-      "prompt": "Does COFFIN allow reproduction on smaller benchmark datasets using standard solvers?",
-      "why_important": "Validated practical feasibility for experimentation."
+      "prompt": "Does the paper provide a theoretical proof for the validity of the Histogram Intersection Kernel on real-valued data?",
+      "why_important": "Validated the theoretical depth of the paper's contribution to kernel theory."
     },
     {
       "rank": 4,
       "interaction_id": 4,
-      "prompt": "Does the paper require restricted datasets or heavy specialized hardware?",
-      "why_important": "Confirmed compliance with infrastructure and dataset constraints."
+      "prompt": "What are the empirical findings regarding the regularization parameter C in the ICD framework?",
+      "why_important": "Identified a key practical advantage for reproduction and large-scale application."
     },
     {
       "rank": 5,
       "interaction_id": 5,
-      "prompt": "Does COFFIN align with the classical SVM unit of the syllabus?",
-      "why_important": "Ensured academic alignment with the course scope."
+      "prompt": "Does the paper align with the Support Vector Machines unit of an Advanced Machine Learning course?",
+      "why_important": "Guaranteed that the selected work falls directly within the scope of Unit 2 of the syllabus."
     }
   ],
   "student_declaration": {
