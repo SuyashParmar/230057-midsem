@@ -1,0 +1,48 @@
+{
+    "student_metadata": {
+        "name": "Suyash Parmar",
+        "roll_number": "230057",
+        "course": "Advanced Machine Learning",
+        "exam": "Mid-Semester Examination",
+        "part": "Part B",
+        "submission_date": "2026-03-12"
+    },
+    "llm_tools_used": [
+        {
+            "tool_name": "ChatGPT",
+            "model": "GPT-4",
+            "provider": "OpenAI"
+        }
+    ],
+    "full_llm_interaction_log": [
+        {
+            "interaction_id": 1,
+            "date": "2026-03-11",
+            "tool_name": "ChatGPT",
+            "model": "GPT-4",
+            "purpose": "Checking numpy axis behavior for Task 4.2",
+            "prompt": "Does np.clip work efficiently on 2D arrays across specific axes?",
+            "llm response used": "Yes",
+            "how_it_helped": "Confirmed numpy broadcasts properly over arrays.",
+            "student_verification": "Tested the code syntax locally to ensure it ran.",
+            "confidence_level": 5,
+            "task tag": "Task 4.2",
+            "code used verbatim": false,
+            "student modification": "I typed the logic myself applying the syntax suggestion."
+        }
+    ],
+    "top_5_prompts": [
+        {
+            "rank": 1,
+            "interaction_id": 1,
+            "prompt": "Does np.clip work efficiently on 2D arrays across specific axes?",
+            "why_important": "Confirmed numpy broadcasts properly over arrays."
+        }
+    ],
+    "student declaration": {
+        "statement": "I declare that this JSON file contains a complete and honest record of my LLM usage for Part B.",
+        "understanding acknowledged": true,
+        "signature": "Suyash Parmar",
+        "date": "2026-03-12"
+    }
+}
